@@ -6,7 +6,7 @@ import {switchMap, takeUntil} from 'rxjs/operators';
 import {AppConfigService} from '../../app-config.service';
 
 import {ApiService, DatacenterService, ProjectService} from '../../core/services';
-import {CloudSpec, ClusterEntity} from '../../shared/entity/ClusterEntity';
+import {ClusterEntity} from '../../shared/entity/ClusterEntity';
 import {DataCenterEntity} from '../../shared/entity/DatacenterEntity';
 import {HealthEntity} from '../../shared/entity/HealthEntity';
 import {ClusterUtils} from '../../shared/utils/cluster-utils/cluster-utils';
@@ -78,8 +78,12 @@ export class ClusterListComponent implements OnInit, OnDestroy {
          cluster.id]);
   }
 
-  getProvider(cloud: CloudSpec): string {
-    return ClusterUtils.getProvider(cloud);
+  getProvider(cluster: ClusterEntity): string {
+    if (cluster.name.endsWith('-openshift')) {
+      return 'openshift';
+    } else {
+      return ClusterUtils.getProvider(cluster.spec.cloud);
+    }
   }
 
   private _loadNodeDc(): void {
