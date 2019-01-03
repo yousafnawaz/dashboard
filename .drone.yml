@@ -19,11 +19,15 @@ pipeline:
   static-check:
     image: node:8
     commands:
+      - printenv
+      - echo $DRONE_JOB_NUMBER
       - make check
 
   node-dist:
     image: node:8
     commands:
+      - printenv
+      - echo $DRONE_JOB_NUMBER
       - make dist
 
   test:
