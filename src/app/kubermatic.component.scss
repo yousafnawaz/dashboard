@@ -1,6 +1,9 @@
 @import "../assets/css/colors";
 @import "../assets/css/variables";
 
+$toolbar-margin: 45px;
+$additional-margin: 20px;
+
 kubermatic-root,
 mat-sidenav-container {
   margin: 0;
@@ -17,4 +20,12 @@ mat-sidenav-container {
 .main {
   height: 100%;
   padding: 0 (2.5 * $baseline-grid);
+}
+
+.mat-sidenav-container {
+  background-color: $grey-background;
+  background-image: url("/assets/images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
 }

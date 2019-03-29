@@ -10,7 +10,6 @@ import {EditMemberComponent} from '../member/edit-member/edit-member.component';
 import {SharedModule} from '../shared/shared.module';
 
 import {BreadcrumbsComponent} from './components/breadcrumbs/breadcrumbs.component';
-import {FooterComponent} from './components/footer/footer.component';
 import {NavigationComponent} from './components/navigation/navigation.component';
 import {NotificationComponent} from './components/notification/notification.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
@@ -38,7 +37,6 @@ const components: any[] = [
   NotificationComponent,
   AddMemberComponent,
   EditMemberComponent,
-  FooterComponent,
 ];
 
 const services: any[] = [

@@ -3,21 +3,21 @@
 
 .container {
   width: $sidenav-width;
-  background-color: $primary;
+  background-color: $grey-background;
   height: 100%;
-  color: $secondary;
+  color: $primary;
 
   .mat-nav-list {
     padding: 0 !important;
 
     .mat-list-item,
     a {
-      color: $secondary;
+      color: $primary;
       height: $toolbar-height;
 
       &.km-projects {
         height: $toolbar-height - ($sidenav-border-width / 2);
-        border-bottom: $alternative solid $sidenav-border-width;
+        border-bottom: $secondary solid $sidenav-border-width;
       }
     }
 
@@ -29,7 +29,7 @@
       &:hover,
       &.active {
         color: $secondary-light;
-        background-color: $primary-light;
+        background-color: $primary;
 
         i {
           background-color: $secondary-light;
@@ -66,14 +66,14 @@
     }
 
     ::ng-deep.mat-select-value-text {
-      color: $secondary;
+      color: $primary;
       font-size: $subhead-font-size-base-lg;
       line-height: $subhead-font-size-base-lg;
     }
 
     ::ng-deep.mat-select-placeholder {
       opacity: 0.4;
-      color: $secondary;
+      color: $primary;
       font-size: $subhead-font-size-base-lg !important;
       line-height: $subhead-font-size-base-lg;
     }
@@ -88,7 +88,7 @@
     }
 
     .mat-list-item i {
-      background-color: $secondary;
+      background-color: $primary;
     }
 
     .km-disabled {

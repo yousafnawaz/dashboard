@@ -23,9 +23,6 @@
           <kubermatic-breadcrumbs *ngIf="auth.authenticated()"></kubermatic-breadcrumbs>
           <router-outlet></router-outlet>
         </div>
-        <kubermatic-footer [version]="version"
-                           [config]="config"
-                           [authenticated]="auth.authenticated()"></kubermatic-footer>
       </div>
     </mat-sidenav-container>
   </div>

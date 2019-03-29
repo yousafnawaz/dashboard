@@ -6,9 +6,10 @@
   <div fxLayout
        class="km-navigation-bar"
        [ngClass]="{'km-sidenav-padding': auth.authenticated()}">
+    <a class="km-header-logo-altemista"></a>
+    <div fxFlex></div>
     <a class="km-header-logo"></a>
-    <div class="km-auth"
-         fxFlex>
+    <div class="km-auth">
       <span class="km-current-user"
             *ngIf="currentUser && !!currentUser.name">{{ currentUser.name }}</span>
       <span id="km-navbar-logout-btn"
