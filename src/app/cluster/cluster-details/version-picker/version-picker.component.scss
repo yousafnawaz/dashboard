@@ -78,14 +78,14 @@
     }
 
     ::ng-deep .mat-form-field-outline-thick {
-      color: $quaternary !important;
+      color: $alternative !important;
       opacity: 1 !important;
       transition: all .5s ease;
     }
 
     ::ng-deep div.mat-form-field-flex label {
       transition: all .5s ease;
-      color: $quaternary-dark !important;
+      color: $alternative-dark !important;
     }
   }
 

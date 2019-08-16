@@ -1,0 +1,130 @@
+@import "variables";
+@import "colors";
+
+// Logo
+.km-header-logo {
+  background-image: url("/assets/vf/vf-logo.png");
+  background-position: 26px 8px !important;
+}
+
+// Menu
+.mat-nav-list a:hover,
+a.active {
+  background-color: $alternative-light !important;
+}
+
+.mat-list-item.km-projects {
+  height: 61px !important;
+  border-bottom-color: $primary !important;
+
+  .km-projects-icon {
+    background-color: $white-text-color !important;
+  }
+}
+
+.container .km-sidenav-bottom {
+  border-top-color: $alternative-light !important;
+}
+
+.container * {
+  color: $white-text-color !important;
+}
+
+.mat-line i {
+  background-color: $white-text-color !important;
+}
+
+// Wizard Progress Bar
+.km-card-progress-bar.mat-card .km-wizard-step.active,
+.km-card-progress-bar.mat-card .km-wizard-step.completed {
+  color: $alternative !important;
+
+  .km-icon-tick-blue {
+    background-color: $white-background;
+  }
+
+  .km-wizard-step-number {
+    background: $alternative !important;
+    color: $white-text-color !important;
+  }
+}
+
+// Buttons
+.mat-button,
+.mat-flat-button,
+.mat-raised-button {
+  background-color: $alternative;
+
+  &:hover:not([disabled]) {
+    background-color: $alternative-light;
+  }
+
+  &.mat-alternative:not([disabled]) {
+    background-color: $primary;
+
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+  background-color: $alternative;
+}
+
+// Form Fields
+div.mat-form-field-outline.mat-form-field-outline-thick {
+  color: $alternative !important;
+}
+
+mat-form-field.mat-form-field-should-float:not(.mat-focused):not(.ng-invalid):not(.mat-form-field-disabled) div.mat-form-field-flex:hover label {
+  color: $alternative-dark !important;
+}
+
+.km-cluster-spec-type mat-button-toggle:hover,
+.km-cluster-spec-type mat-button-toggle.mat-button-toggle-checked {
+  border-color: $alternative !important;
+}
+
+mat-button-toggle-group mat-button-toggle:hover,
+mat-button-toggle-group .mat-button-toggle-checked {
+  border-color: $alternative !important;
+}
+
+mat-button-toggle-group[group='datacenterGroup'] .mat-button-toggle-checked,
+mat-button-toggle-group[group='providerGroup'] .mat-button-toggle-checked {
+  border-color: $alternative !important;
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: $alternative !important;
+}
+
+.km-version-picker-container {
+  .km-version-picker-enabled:hover {
+    .km-version-picker-type {
+      border-color: $alternative !important;
+    }
+  }
+}
+
+::ng-deep .km-version-picker-container .km-version-picker-enabled:hover .mat-form-field-outline-thick {
+  color: $alternative !important;
+}
+
+.mat-option:hover,
+.mat-option.mat-active {
+  background-color: $grey-background !important;
+}
+
+.mat-primary .mat-pseudo-checkbox-checked,
+.mat-primary .mat-pseudo-checkbox-indeterminate {
+  background-color: $primary !important;
+}
+
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: $alternative !important;
+}
