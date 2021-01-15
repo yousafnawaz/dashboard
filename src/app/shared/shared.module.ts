@@ -90,6 +90,15 @@ import {TabComponent} from '@shared/components/tab-card/tab/component';
 import {EventCardComponent} from '@shared/components/event-card/component';
 import {ScrollingModule} from '@angular/cdk/scrolling';
 
+import {OverlayModule} from '@angular/cdk/overlay';
+import {DialogComponent} from './components/guided-tour/dialog/component';
+import {DialogService} from './components/guided-tour/dialog/service';
+import {GuidedTourDirective} from './components/guided-tour/directive';
+import {GTAddProjectBtnComponent} from './components/guided-tour/steps/add-project-btn/component';
+import {GTAddProjectDialogComponent} from './components/guided-tour/steps/add-project-dialog/component';
+import {GTProjectItemComponent} from './components/guided-tour/steps/project-item/component';
+import {DialogHelperService} from './components/guided-tour/dialog/helper.service';
+
 const modules: any[] = [
   CommonModule,
   FormsModule,
@@ -132,6 +141,7 @@ const modules: any[] = [
   ScrollingModule,
   FilterPipeModule,
   MonacoEditorModule,
+  OverlayModule,
 ];
 
 const components: any[] = [
@@ -170,13 +180,17 @@ const components: any[] = [
   ExternalClusterDataDialogComponent,
   LoaderComponent,
   SearchFieldComponent,
+  DialogComponent,
+  GTAddProjectBtnComponent,
+  GTAddProjectDialogComponent,
+  GTProjectItemComponent,
   TabCardComponent,
   TabComponent,
 ];
 
-const services: any[] = [ClusterService, EndOfLifeService];
+const services: any[] = [ClusterService, EndOfLifeService, DialogService, DialogHelperService];
 
-const directives: any[] = [AutofocusDirective, OptionDirective];
+const directives: any[] = [AutofocusDirective, OptionDirective, GuidedTourDirective];
 
 @NgModule({
   imports: [...modules],

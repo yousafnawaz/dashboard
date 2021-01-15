@@ -47,6 +47,9 @@ import {filter, switchMap, take, takeUntil, tap} from 'rxjs/operators';
 import {DeleteProjectConfirmationComponent} from './delete-project/delete-project.component';
 import {EditProjectComponent} from './edit-project/edit-project.component';
 
+import {DialogService} from '@shared/components/guided-tour/dialog/service';
+import {GuidedTourID} from '@shared/components/guided-tour/utils';
+
 @Component({
   selector: 'km-project',
   templateUrl: './project.component.html',
@@ -54,6 +57,8 @@ import {EditProjectComponent} from './edit-project/edit-project.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectComponent implements OnInit, OnChanges, OnDestroy {
+  readonly GuidedTourID = GuidedTourID;
+
   projects: Project[] = [];
   currentUser: Member;
   isInitializing = true;
@@ -106,6 +111,7 @@ export class ProjectComponent implements OnInit, OnChanges, OnDestroy {
     private readonly _previousRouteService: PreviousRouteService,
     private readonly _cdr: ChangeDetectorRef,
     private readonly _settingsService: SettingsService,
+    private _dialogService: DialogService,
     @Inject(COOKIE_DI_TOKEN) private readonly _cookie: Cookie
   ) {}
 
@@ -419,5 +425,9 @@ export class ProjectComponent implements OnInit, OnChanges, OnDestroy {
 
   private _isPaginatorVisible(): boolean {
     return !_.isEmpty(this.projects) && this.paginator && this.projects.length > this.paginator.pageSize;
+  }
+
+  startTour(): void {
+    this._dialogService.startTour();
   }
 }
